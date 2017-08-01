@@ -1,0 +1,21 @@
+{
+    "colisuiviApp": {
+        "cheminement" : {
+            "home": {
+                "title": "Cheminements",
+                "createLabel": "Créer un nouveau Cheminement",
+                "createOrEditLabel": "Créer ou éditer un Cheminement"
+            },
+            "created": "Un nouveau Cheminement a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cheminement avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cheminement avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cheminement {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cheminement"
+            },
+            "dataArrive": "Data Arrive"
+        }
+    }
+}

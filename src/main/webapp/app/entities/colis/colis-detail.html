@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span data-translate="colisuiviApp.colis.detail.title">Colis</span> {{vm.colis.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="colisuiviApp.colis.statut">Statut</span></dt>
+        <dd>
+            <span data-translate="{{'colisuiviApp.LivraisonStatut.' + vm.colis.statut}}">{{vm.colis.statut}}</span>
+        </dd>
+        <div ng-repeat="chemin in vm.colis.cheminements track by $index">
+        <dt><span >{{chemin.agence.nom}}</span></dt>
+        <dd>
+            <span >{{chemin.dateArrive}}</span>
+        </dd>
+        </div>
+
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="colis-detail.edit({id:vm.colis.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

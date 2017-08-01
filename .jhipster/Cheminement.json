@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "dataArrive",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20170730191534",
+    "entityTableName": "cheminement",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

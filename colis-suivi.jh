@@ -1,0 +1,36 @@
+enum LivraisonStatut {
+	INREGISTRE, ENVOYE, ENCOURS, LIVRE
+}
+
+entity Person {
+	nom String,
+    preNom String,
+    phone String,
+    adresse String
+}
+
+entity Agence {
+	nom String,
+    adresse String,
+    phone String
+}
+
+entity Cheminement {
+	dataArrive ZonedDateTime,
+    //agence Agence
+}
+
+entity Colis {
+	statut LivraisonStatut
+}
+/**
+relationship OneToOne {
+	Colis{expidateur} to Person,
+    Colis{destinataire} to Person,
+    Cheminement{agence} to Agence
+}
+
+relationship OneToMany {
+	Colis{cheminements} to Cheminement
+}
+**/

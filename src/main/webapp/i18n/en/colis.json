@@ -1,0 +1,21 @@
+{
+    "colisuiviApp": {
+        "colis" : {
+            "home": {
+                "title": "Colis",
+                "createLabel": "Create a new Colis",
+                "createOrEditLabel": "Create or edit a Colis"
+            },
+            "created": "A new Colis is created with identifier {{ param }}",
+            "updated": "A Colis is updated with identifier {{ param }}",
+            "deleted": "A Colis is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Colis {{ id }}?"
+            },
+            "detail": {
+                "title": "Colis"
+            },
+            "statut": "Statut"
+        }
+    }
+}

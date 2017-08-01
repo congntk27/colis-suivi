@@ -1,0 +1,102 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myColisLabel" data-translate="colisuiviApp.colis.home.createOrEditLabel">Create or edit a Colis</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.colis.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.colis.id" readonly />
+        </div>
+        <div class="row">
+        	<div class="col-lg-6">
+        	Expidateur
+        		<div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.nom" for="field_nom">Nom</label>
+            <input type="text" class="form-control" name="nom" id="field_nom"
+                    ng-model="vm.colis.expidateur.nom"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.preNom" for="field_preNom">Pre Nom</label>
+            <input type="text" class="form-control" name="preNom" id="field_preNom"
+                    ng-model="vm.colis.expidateur.preNom"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.phone" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.colis.expidateur.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.adresse" for="field_adresse">Adresse</label>
+            <input type="text" class="form-control" name="adresse" id="field_adresse"
+                    ng-model="vm.colis.expidateur.adresse"
+                    />
+        </div>
+         <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.colis.statut" for="field_statut">Statut</label>
+            <select class="form-control" name="statut" ng-model="vm.colis.statut" id="field_statut">
+                <option value="ENREGISTRE" data-translate="colisuiviApp.LivraisonStatut.ENREGISTRE">ENREGISTRE</option>
+                <option value="ENVOYE" data-translate="colisuiviApp.LivraisonStatut.ENVOYE">ENVOYE</option>
+                <option value="ENCOURS" data-translate="colisuiviApp.LivraisonStatut.ENCOURS">ENCOURS</option>
+                <option value="LIVRE" data-translate="colisuiviApp.LivraisonStatut.LIVRE">LIVRE</option>
+            </select>
+        </div>
+        	</div>
+	
+        <div class="col-lg-6">
+        Destinataire
+        <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.nom" for="field_nom">Nom</label>
+            <input type="text" class="form-control" name="nom" id="field_nom"
+                    ng-model="vm.colis.destinataire.nom"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.preNom" for="field_preNom">Pre Nom</label>
+            <input type="text" class="form-control" name="preNom" id="field_preNom"
+                    ng-model="vm.colis.destinataire.preNom"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.phone" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.colis.destinataire.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="colisuiviApp.person.adresse" for="field_adresse">Adresse</label>
+            <input type="text" class="form-control" name="adresse" id="field_adresse"
+                    ng-model="vm.colis.destinataire.adresse"
+                    />
+        </div>
+                 <div class="form-group">
+            <label class="control-label" for="field_statut">Agence</label>
+            <select class="form-control" name="statut" ng-model="vm.selectedAgenceId" id="field_statut">
+                <option value="{{agence.id}}" ng-repeat="agence in vm.agences track by $index">{{agence.nom}}</option>
+                
+            </select>
+        </div>
+        
+        </div>
+        </div>
+        
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

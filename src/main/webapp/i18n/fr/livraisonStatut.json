@@ -1,0 +1,11 @@
+{
+    "colisuiviApp": {
+        "LivraisonStatut" : {
+            "null": "",
+            "INREGISTRE": "INREGISTRE",
+            "ENVOYE": "ENVOYE",
+            "ENCOURS": "ENCOURS",
+            "LIVRE": "LIVRE"
+        }
+    }
+}
